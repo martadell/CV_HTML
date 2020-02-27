@@ -3,26 +3,48 @@ body {
 }
 
 main {
-    margin: 5rem 15rem 2rem;
+    margin: 5rem 15rem;
+    padding: 2rem 0rem;
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 section {
     text-align: center;
-    padding: 3rem;
+    padding: 0rem 3rem;
+}
+
+.h-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h3 {
     text-decoration:underline;
     text-decoration-color: rgb(166, 143, 188);
+    text-align: center;
 }
 
-#links
-{
+/*Presentation*/
+
+#link-names {
+    width: 14rem;
+    font-size: 12pt;
+    line-height: 2rem;
     text-align: right;
+
 }
+
+#links {
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1rem;
+}
+
+/*Experience*/
 
 .exp-time {
     color: rgb(166, 143, 188);
 }
+
