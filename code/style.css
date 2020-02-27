@@ -14,7 +14,7 @@ section {
     padding: 0rem 3rem;
 }
 
-.h-align {
+.fbox {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,18 +28,28 @@ h3 {
 
 /*Presentation*/
 
-#link-names {
-    width: 14rem;
-    font-size: 12pt;
-    line-height: 2rem;
-    text-align: right;
+.column {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    align-items: center;
+}
 
+.v {
+    align-items:flex-start;
+    flex-direction: column;
+    text-align: left;
+}
+
+#link-names {
+    font-size: 11pt;
+    line-height: 26pt;
+    text-align: right;
+    padding: 0 1rem;
 }
 
 #links {
     align-items: center;
-    justify-content: space-between;
-    padding-left: 1rem;
 }
 
 /*Experience*/
