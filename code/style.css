@@ -11,35 +11,83 @@ main {
 
 section {
     text-align: center;
-    padding: 0rem 3rem;
+    padding: 1rem 3rem;
 }
 
-.fbox {
+h1 {
+    color: #827A9B;
+    font-family: 'Lucida Sans', sans-serif;
+    text-align: center;
+}
+
+.section-frame {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-h3 {
-    text-decoration:underline;
-    text-decoration-color: rgb(166, 143, 188);
-    text-align: center;
-}
-
-/*Presentation*/
-
-.column {
+.section-box {
     display: flex;
     justify-content: center;
     flex: 1;
     align-items: center;
+    padding: 0 2rem;
 }
 
-.v {
-    align-items:flex-start;
+.column {
+    align-items: stretch;
     flex-direction: column;
     text-align: left;
+    flex-wrap: wrap;
 }
+
+.right {
+    text-align: right;
+}
+
+.center{
+    text-align: center;
+}
+
+/*Images*/
+
+.icon {
+    height: 2rem; 
+    width: auto;
+    fill: #827A9B;
+    opacity: 80%;
+}
+
+#M {
+    height: 8rem; 
+    width: auto;
+    fill: #827A9B;
+    opacity: 80%;
+}
+
+.cheese {
+    height: 5rem;
+    width: auto;
+    padding-bottom: 1rem;
+}
+
+.cheese .st1 {
+    fill:none;
+    stroke:#5B5B5F;
+    stroke-width:0.75;
+    stroke-miterlimit:10;
+}
+
+.cheese .st2 {
+    opacity:0.6;
+    fill:none;
+    stroke:#827A9B;
+    stroke-width:6;
+    stroke-miterlimit:10;
+}
+
+
+/*Presentation section*/
 
 #link-names {
     font-size: 11pt;
