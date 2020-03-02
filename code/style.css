@@ -48,6 +48,7 @@ h1 {
 
 .right {
     text-align: right;
+    align-items: flex-end;
 }
 
 .center{
@@ -124,14 +125,35 @@ h1 {
 
 /*Experience*/
 
+#experience .section-box {
+    padding: 0 15px;
+}
+
+.exp-box {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.exp-box .l {
+    padding: 15px 0 0 10px;
+    width: 10px;
+    height: 20px;
+}
+
+.exp-box .r {
+    padding: 15px 10px 0 0;
+    width: 10px;
+    height: 20px;
+}
+
 .exp-time {
     color: #827A9B;
 }
 
-#timeline {
-    height: auto;
-    width: 12px;
-    align-items: center;
+#experience .vline {
+    width: 0px;
+    height: 300px;
 }
 
 /*Skills*/
