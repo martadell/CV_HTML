@@ -3,21 +3,26 @@ body {
 }
 
 main {
-    margin: 5rem 15rem;
-    padding: 2rem 0rem;
     background-color: white;
+    margin: 80px 240px;
+    padding: 30px 0;
+    border-style: solid;
+    border-width: 0  10px 10px 0;
+    border-color: #827A9B;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 section {
     text-align: center;
-    padding: 1rem 3rem;
+    padding: 15px 50px;
 }
 
 h1 {
     color: #827A9B;
-    font-family: 'Lucida Sans', sans-serif;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
     text-align: center;
+    font-weight: bold;
 }
 
 .section-frame {
@@ -31,7 +36,7 @@ h1 {
     justify-content: center;
     flex: 1;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 30px;
 }
 
 .column {
@@ -52,23 +57,41 @@ h1 {
 /*Images*/
 
 .icon {
-    height: 2rem; 
+    height: 30px; 
     width: auto;
     fill: #827A9B;
     opacity: 80%;
 }
 
 #M {
-    height: 8rem; 
+    height: 130px; 
     width: auto;
     fill: #827A9B;
     opacity: 80%;
 }
 
 .cheese {
-    height: 5rem;
+    height: 80px;
     width: auto;
-    padding-bottom: 1rem;
+    padding-bottom: 15px;
+}
+
+/*svgs*/
+
+.st1 {
+    fill:none;stroke:#5B5B5F;
+    stroke-width:0.75;
+    stroke-miterlimit:10;
+}
+
+.st2 {
+    opacity:0.6;
+    fill:#827A9B;
+}
+
+.st3 {
+    opacity:0.6;
+    fill:#C2B6D5;
 }
 
 .cheese .st1 {
@@ -86,14 +109,13 @@ h1 {
     stroke-miterlimit:10;
 }
 
-
 /*Presentation section*/
 
 #link-names {
     font-size: 11pt;
     line-height: 26pt;
     text-align: right;
-    padding: 0 1rem;
+    padding: 0 15px;
 }
 
 #links {
@@ -103,6 +125,46 @@ h1 {
 /*Experience*/
 
 .exp-time {
-    color: rgb(166, 143, 188);
+    color: #827A9B;
 }
 
+#timeline {
+    height: auto;
+    width: 12px;
+    align-items: center;
+}
+
+/*Skills*/
+
+.graph {
+    padding: 0 0 15px 0;
+}
+
+/*Contact form*/
+
+#contact-form {
+    flex-direction: column;
+}
+
+#contact-form p {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#contact-form label {
+    padding-bottom: 5px;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 350px;
+    padding: 5px;
+    border: 1px solid #5B5B5F;
+}
+
+#contact-form .btn {
+    font-family: 'Montserrat';
+    background-color: #827A9B;
+    color: white;
+    border: none;
+}
