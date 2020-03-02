@@ -55,7 +55,7 @@ h1 {
     text-align: center;
 }
 
-/*Images*/
+/*Graphic elements*/
 
 .icon {
     height: 30px; 
@@ -75,6 +75,12 @@ h1 {
     height: 80px;
     width: auto;
     padding-bottom: 15px;
+}
+
+.vline {
+    width: 0px;
+    height: inherit;
+    align-self: stretch;
 }
 
 /*svgs*/
@@ -131,29 +137,26 @@ h1 {
 
 .exp-box {
   display: flex;
-  align-items: flex-start;
   flex-direction: row;
+  flex-shrink: 0;
 }
 
 .exp-box .l {
     padding: 15px 0 0 10px;
     width: 10px;
     height: 20px;
+    flex-shrink: 0;
 }
 
 .exp-box .r {
     padding: 15px 10px 0 0;
     width: 10px;
     height: 20px;
+    flex-shrink: 0;
 }
 
 .exp-time {
     color: #827A9B;
-}
-
-#experience .vline {
-    width: 0px;
-    height: 300px;
 }
 
 /*Skills*/
