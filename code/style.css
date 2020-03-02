@@ -1,10 +1,16 @@
 body {
     background-color: rgb(220, 220, 220);
+    display: flex;
+
+}
+
+#body-container {
+    padding: 80px 140px 60px 100px;
+    display: flex;
 }
 
 main {
     background-color: white;
-    margin: 80px 240px;
     padding: 30px 0;
     border-style: solid;
     border-width: 0  10px 10px 0;
@@ -17,19 +23,13 @@ section {
     padding: 15px 50px;
 }
 
-h1 {
-    color: #827A9B;
-    font-family: 'Montserrat';
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: bold;
-}
-
 .section-frame {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+/**Boxes**/
 
 .section-box {
     display: flex;
@@ -38,6 +38,8 @@ h1 {
     align-items: center;
     padding: 0 30px;
 }
+
+/*Box alignment*/
 
 .column {
     align-items: stretch;
@@ -55,7 +57,21 @@ h1 {
     text-align: center;
 }
 
-/*Graphic elements*/
+/**Text**/
+
+h1 {
+    color: #827A9B;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+
+p {
+    line-height: 16pt;
+}
+
+/**Graphic elements**/
 
 .icon {
     height: 25px; 
@@ -83,7 +99,7 @@ h1 {
     align-self: stretch;
 }
 
-/*svgs*/
+/*SVGs*/
 
 .st1 {
     fill:none;stroke:#5B5B5F;
@@ -118,9 +134,27 @@ h1 {
 
 /*Links*/
 
+.link-box {
+    width: 40px;
+    height: 40px;
+    background-color: #827A9B;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
 
+.link-box:hover{
+    background-color: #5B5B5F;
+}
 
-/*Presentation section*/
+.link-icon {
+    padding: 5px;
+    fill: white;
+    width: 30px;
+    height: 30px;
+}
+
+/****Presentation section****/
+
 
 #contact-info {
     font-size: 10pt;
@@ -128,11 +162,7 @@ h1 {
     border-spacing: 5px 10px;    
 }
 
-#links {
-    align-items: center;
-}
-
-/*Experience*/
+/****Experience section****/
 
 #experience .section-box {
     padding: 0 15px;
@@ -162,11 +192,7 @@ h1 {
     color: #827A9B;
 }
 
-/*Skills*/
-
-#knowledge {
-    line-height: 16pt;
-}
+/****Skills section****/
 
 .skills-table {
     text-align: center;
@@ -178,7 +204,7 @@ h1 {
     padding-right: 15px;
 }
 
-/*Contact form*/
+/****Contact form****/
 
 #contact-form {
     flex-direction: column;
@@ -205,4 +231,9 @@ h1 {
     background-color: #827A9B;
     color: white;
     border: none;
+    transition: 0.3s;
+}
+
+#contact-form .btn:hover{
+    background-color: #5B5B5F;
 }
