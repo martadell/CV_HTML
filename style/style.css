@@ -118,15 +118,11 @@ p {
 .icon {
     height: 25px; 
     width: auto;
-    fill: #827A9B;
-    opacity: 80%;
 }
 
 #M {
     height: 130px; 
     width: auto;
-    fill: #827A9B;
-    opacity: 80%;
 }
 
 .cheese {
@@ -190,7 +186,6 @@ p {
 
 .link-icon {
     padding: 5px;
-    fill: white;
     width: 30px;
     height: 30px;
 }
