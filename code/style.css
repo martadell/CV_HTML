@@ -161,8 +161,18 @@ h1 {
 
 /*Skills*/
 
+#knowledge {
+    line-height: 16pt;
+}
+
+.skills-table {
+    text-align: center;
+}
+
 .graph {
-    padding: 0 0 15px 0;
+    width: 100px;
+    height: 10px;
+    padding-right: 15px;
 }
 
 /*Contact form*/
