@@ -58,7 +58,7 @@ h1 {
 /*Graphic elements*/
 
 .icon {
-    height: 30px; 
+    height: 25px; 
     width: auto;
     fill: #827A9B;
     opacity: 80%;
@@ -116,13 +116,16 @@ h1 {
     stroke-miterlimit:10;
 }
 
+/*Links*/
+
+
+
 /*Presentation section*/
 
-#link-names {
-    font-size: 11pt;
-    line-height: 26pt;
+#contact-info {
+    font-size: 10pt;
     text-align: right;
-    padding: 0 15px;
+    border-spacing: 5px 10px;    
 }
 
 #links {
