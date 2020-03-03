@@ -14,25 +14,22 @@
 <body>
     <!--1. PRESENTATION-->
     <header class="section-frame">
-        <div class="section-box column right">
-            <table id="contact-info">
-                <tr>
-                    <td>marta.adell.noguera@gmail.com</td>
-                    <td><img class="icon" src="resources/arrova.svg" alt="e-mail" /></td>
-                </tr>
-                <tr>
-                    <td>123 45 67 89</td>
-                    <td><img class="icon" src="resources/telf.svg" alt="mobile phone" /></td>
-                </tr>
-            </table>
-        </div>
+        <table id="contact-info">
+            <tr>
+                <td>marta.adell.noguera@gmail.com</td>
+                <td><img class="icon" src="resources/arrova.svg" alt="e-mail" /></td>
+            </tr>
+            <tr>
+                <td>123 45 67 89</td>
+                <td><img class="icon" src="resources/telf.svg" alt="mobile phone" /></td>
+            </tr>
+        </table>
 
-        <img id="M" src="resources/M.svg" alt="M" />
+        <img id="M" src="resources/M.svg" alt="M"/>
 
-        <div id="name" class="section-box column">
-            <p><span style="font-size: 18pt; line-height: 30px;">Marta Adell i Noguera</span>
-                <br>Industrial Design Engineer</p>
-        </div>
+        <p id="name"><span style="font-size: 18pt; line-height: 30px;">
+            Marta Adell i Noguera</span><br>
+            Industrial Design Engineer</p>
     </header>
 
     <div id="main-box">
@@ -74,7 +71,7 @@
                         who has found two of her biggest interests after graduating:
                         design and programming. Currently studying a Full Stack Web
                         Technologies postgrade course, so at the moment focused on
-                        learning more programming.<p>
+                        learning more programming.</p>
                 </section>
 
                 <!--3. EXPERIENCE-->
@@ -113,7 +110,7 @@
 
                         <hr class="vline" />
 
-                        <div class="section-box column">
+                        <div class="section-box column left">
                             <div class="exp-box">
                                 <svg class="r">
                                     <rect class="st3" width="5px" height="20px" />
@@ -148,7 +145,7 @@
                 <section id="skills">
                     <h1>Skills</h1>
                     <div class="section-frame">
-                        <p id="knowledge" class="section-box column right">
+                        <p id="knowledge" class="section-box right">
                             3D Modeling, rendering and animation.<br>
                             Spreadsheets.<br>
                             Work Instructions and industrial proceeding drafting and development.<br>
@@ -157,9 +154,9 @@
                             C, Java and Android app developing.
                         </p>
 
-                        <hr class="vline" />
+                        <hr class="vline"/>
 
-                        <table id="skills-table" class="section-box column">
+                        <table id="skills-table" class="section-box column left">
                             <tr>
                                 <td><svg id="80pcnt" class="graph">
                                         <line class="st1" x1="0" y1="5" x2="100" y2="5" />
@@ -223,7 +220,7 @@
                 <section id="languages">
                     <h1>Languages</h1>
                     <div class="section-frame">
-                        <div class="section-box column center">
+                        <div class="section-box column">
                             <svg version="1.1" id="c1-02" class="cheese" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45.3 45.4"
                                 style="enable-background:new 0 0 45.3 45.4;" xml:space="preserve">
@@ -234,7 +231,7 @@
                                 <span style="font-size: 10pt;">Mother tongue</span></p>
                         </div>
 
-                        <div class="section-box column center">
+                        <div class="section-box column">
                             <svg version="1.1" id="c1-02" class="cheese" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45.3 45.4"
                                 style="enable-background:new 0 0 45.3 45.4;" xml:space="preserve">
@@ -246,7 +243,7 @@
                             </p>
                         </div>
 
-                        <div class="section-box column center">
+                        <div class="section-box column">
                             <svg version="1.1" id="c3o4-02" class="cheese" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45.3 44.7"
                                 style="enable-background:new 0 0 45.3 44.7;" xml:space="preserve">
@@ -259,7 +256,7 @@
                             </p>
                         </div>
 
-                        <div class="section-box column center">
+                        <div class="section-box column">
                             <svg version="1.1" id="c1o2-02" class="cheese" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 44.3 44.7"
                                 style="enable-background:new 0 0 44.3 44.7;" xml:space="preserve">
@@ -272,7 +269,7 @@
                             </p>
                         </div>
 
-                        <div class="section-box column center">
+                        <div class="section-box column">
                             <svg version="1.1" id="c1o4-02" class="cheese" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 44.7 44.7"
                                 style="enable-background:new 0 0 44.7 44.7;" xml:space="preserve">
@@ -289,12 +286,12 @@
                 <!--6. CONTACT FORM-->
                 <section id="contact">
                     <h1>Contact</h1>
-                    <form id="contact-form" action="send-mail.php" method="post" class="section-box">
+                    <form class="section-box column" id="contact-form" action="send-mail.php" method="post">
                         <input type="hidden" id="to" name="to" value="marta.adell.noguera@gmail.com">
+                        
                         <p>
                             <label for="name">Name</label>
                             <input type="text" name="name" id="name" class="required">
-                        </p>
 
                         <p>
                             <label for="email">Email</label>

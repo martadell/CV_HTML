@@ -4,20 +4,24 @@ body {
 }
 
 header {
-    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    flex-wrap: nowrap;
 }
 
 #main-box {
     padding: 0 120px 60px 80px;
-    display: flex;
-    flex-direction: column;
 }
 
+/**Nav**/
+
 #nav-links {
-    display: flex;
+    display: flex;    
+    justify-content: flex-end;
     margin-bottom: 0;
     padding-bottom: 5px;
-    justify-content: flex-end;
 }
 
 #nav-links li {
@@ -31,25 +35,26 @@ header {
     text-transform: uppercase;
     background-color: #827A9B;
     color:white;
-    padding: 5px;
+    padding: 0.5rem;
 }
 
 #nav-links a:hover{
     background-color: #C2B6D5;
 }
 
+/**Main**/
+
 main {
     display: flex;
 }
 
-#scroll-content {
-    background-color: white;
-    padding: 30px 0;
-    border-style: solid;
+#scroll-content {    
+    height: 500px;
+    background-color: white;    
     border-width: 0  10px 10px 0;
     border-color: #827A9B;
+    border-style: solid;
     overflow-y: scroll;
-    height: 400px;
 }
 
 footer {
@@ -70,6 +75,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 /**Boxes**/
@@ -77,27 +83,27 @@ section {
 .section-box {
     display: flex;
     justify-content: center;
-    flex: 1;
-    align-items: center;
-    padding: 0 30px;
+    align-items: center;    
+    flex: 1;   
+    flex-wrap: wrap;   
+    padding: 0 30px; 
 }
 
 /*Box alignment*/
 
-.column {
+.column {    
     align-items: stretch;
     flex-direction: column;
+}
+
+.left {
+    align-items: flex-start;
     text-align: left;
-    flex-wrap: wrap;
 }
 
 .right {
+    align-items: flex-end;    
     text-align: right;
-    align-items: flex-end;
-}
-
-.center{
-    text-align: center;
 }
 
 /**Text**/
@@ -111,7 +117,7 @@ h1 {
 }
 
 p {
-    line-height: 16pt;
+    line-height: 1.5em;
 }
 
 /**Graphic elements**/
@@ -122,8 +128,9 @@ p {
 }
 
 #M {
-    height: 130px; 
+    height: 100px; 
     width: auto;
+    padding: 0 1rem;
 }
 
 .cheese {
@@ -136,6 +143,7 @@ p {
     width: 0px;
     height: inherit;
     align-self: stretch;
+    background-color: #5B5B5F;
 }
 
 /*SVGs*/
@@ -171,7 +179,7 @@ p {
     stroke-miterlimit:10;
 }
 
-/*Links*/
+/****Links****/
 
 .link-box {
     width: 40px;
@@ -196,7 +204,7 @@ p {
 #contact-info {
     font-size: 10pt;
     text-align: right;
-    border-spacing: 5px 10px;    
+    overflow-wrap: break-word; /*doesn't work ?? :(*/
 }
 
 /****Intro****/
@@ -213,8 +221,11 @@ p {
 
 .exp-box {
   display: flex;
-  flex-direction: row;
   flex-shrink: 0;
+}
+
+.exp-time {
+    color: #827A9B;
 }
 
 .exp-box .l {
@@ -231,15 +242,7 @@ p {
     flex-shrink: 0;
 }
 
-.exp-time {
-    color: #827A9B;
-}
-
 /****Skills section****/
-
-.skills-table {
-    text-align: center;
-}
 
 .graph {
     width: 100px;
@@ -248,24 +251,20 @@ p {
 }
 
 /****Contact form****/
-
-#contact-form {
-    flex-direction: column;
-}
-
 #contact-form p {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin: 5px;
 }
 
 #contact-form label {
-    padding-bottom: 5px;
+    align-self: flex-start;
+    margin-left: 10%;
 }
 
-#contact-form input, #contact-form textarea {
-    width: 350px;
+#contact-form input, #contact-form textarea {  
+    width: 80%;
     padding: 5px;
     border: 1px solid #5B5B5F;
 }
@@ -292,4 +291,29 @@ p {
 
 #final-note p a {
     color:white;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 5px 0;
+    }
+
+    #main-box {
+      padding: 10px;
+    }
+
+/**Skills section -> changed to vertical**/
+    #knowledge {
+        text-align: center;
+    }
+
+    #skills-table {
+        align-items: center;
+    }
+
+    #skills hr {
+        width: 100%;
+    }
+
 }
