@@ -146,7 +146,7 @@
                   <span>2018</span><br>
                   ESEIAAT, Universitat Politècnica de Catalunya (UPC),
                   Terrassa<br>
-                  <strong>Industrial Design Engineering</strong>
+                  <strong>Final thesis: Development of an Android APP for playing audio segments</strong>
                 </p>
               </div>
 
@@ -176,7 +176,7 @@
               development.<br>
               Graphic Design.<br>
               Photo and video editing.<br>
-              C, Java and Android app developing.
+              Android app developing.
             </p>
 
             <hr class="vline" />
@@ -225,9 +225,25 @@
               <div class="box">
                 <svg viewBox="0 0 100 10" width="100px" height="10px">
                   <line class="inner-line" x1="0" y1="5" x2="100" y2="5" />
-                  <rect class="purple" width="40px" height="10px" />
+                  <rect class="purple" width="50px" height="10px" />
                 </svg>
-                <p>SAP</p>
+                <p>Java</p>
+              </div>
+
+              <div class="box">
+                <svg viewBox="0 0 100 10" width="100px" height="10px">
+                  <line class="inner-line" x1="0" y1="5" x2="100" y2="5" />
+                  <rect class="purple" width="50px" height="10px" />
+                </svg>
+                <p>HTML & CSS</p>
+              </div>
+
+              <div class="box">
+                <svg viewBox="0 0 100 10" width="100px" height="10px">
+                  <line class="inner-line" x1="0" y1="5" x2="100" y2="5" />
+                  <rect class="purple" width="20px" height="10px" />
+                </svg>
+                <p>JavaScript</p>
               </div>
             </div>
           </div>
@@ -297,27 +313,25 @@
         <!--6. CONTACT FORM-->
         <section>
           <h1>Contact</h1>
-          <form id="contact" class="box column" action="send-mail.php" method="post">
-            <input type="hidden" id="to" name="to" value="marta.adell.noguera@gmail.com" />
-
+          <form id="contactForm" class="box column" method="post">
             <p>
               <label for="name">Name</label>
-              <input type="text" name="name" id="name" class="required" />
+              <input type="text" name="name" id="name" required />
             </p>
 
             <p>
               <label for="email">Email</label>
-              <input type="text" name="email" id="email" class="required email" />
+              <input type="text" name="email" id="email" required />
             </p>
 
             <p>
               <label for="subject">Subject</label>
-              <input type="text" name="subject" id="subject" class="required" />
+              <input type="text" name="subject" id="subject" required />
             </p>
 
             <p>
               <label for="message">Message</label>
-              <textarea name="message" id="message" class="required"></textarea>
+              <textarea name="message" id="message" required></textarea>
             </p>
 
             <p>
@@ -347,6 +361,59 @@
   <footer>
     <p>Marta Adell i Noguera, 2020</p>
   </footer>
+
+  <!--FIREBASE (for the contact form)-->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+
+  <!-- Added Database SDK-->
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
+
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyD-UY70tOc-gPKCtdpkLI75sG6S7ui7Awc",
+      authDomain: "contact-form-66757.firebaseapp.com",
+      databaseURL: "https://contact-form-66757.firebaseio.com",
+      projectId: "contact-form-66757",
+      storageBucket: "contact-form-66757.appspot.com",
+      messagingSenderId: "456533599339",
+      appId: "1:456533599339:web:ffa1a118e9eb517db83d2e",
+      measurementId: "G-YJCLDRT881"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
+  <!--SCRIPT TO MANAGE AND SEND E-MAILS WITH THE DATA FROM THE CONTACT FORM-->
+  <script>
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', contactForm);
+
+    function contactForm(event) {
+      event.preventDefault();
+      const data = {
+        'name': document.getElementById('name').value,
+        'email': document.getElementById('email').value,
+        'subject': document.getElementById('subject').value,
+        'message': document.getElementById("message").value
+      };
+      saveContactForm(data);
+      form.reset();
+    }
+
+    function saveContactForm(data) {
+      firebase.database().ref('contactForm').push(data)
+        .then(function () {
+          alert('Message sent, thank you!');
+        })
+        .catch(function () {
+          alert('Message not send, please try again');
+        });
+    };
+  </script>
+
 </body>
 
 </html>

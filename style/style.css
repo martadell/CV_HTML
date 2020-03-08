@@ -205,6 +205,7 @@ main {
 #experience div {
   display: flex;
   flex-shrink: 0;
+  flex-wrap: nowrap;
 }
 
 #experience span {
@@ -235,6 +236,11 @@ main {
 #skills .left .box {
   padding: 0;
   justify-items: center;
+  flex-wrap: nowrap;
+}
+
+#skills .left .box svg {
+  flex-shrink: 0;
 }
 
 #skills .left .box p {
@@ -253,26 +259,26 @@ main {
 }
 
 /**Contact form**/
-#contact p {
+#contactForm p {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 5px;
 }
 
-#contact label {
+#contactForm label {
   align-self: flex-start;
-  margin-left: 10%;
+  margin-left: 20%;
 }
 
-#contact input,
-#contact textarea {
-  width: 80%;
+#contactForm input,
+#contactForm textarea {
+  width: 60%;
   padding: 5px;
   border: 1px solid #5b5b5f;
 }
 
-#contact .btn {
+#contactForm .btn {
   font-family: "Montserrat";
   background-color: #827a9b;
   color: white;
@@ -280,13 +286,12 @@ main {
   transition: 0.3s;
 }
 
-#contact .btn:hover {
+#contactForm .btn:hover {
   background-color: #c2b6d5;
 }
 
 /**Final note**/
 #final-note p {
-  font-size: 10pt;
   background-color: #c2b6d5;
   padding: 5px;
 }
@@ -349,6 +354,14 @@ footer p {
     height: 20px;
   }
 
+  #experience .left {
+    padding-left: 1rem;
+  }
+
+  #experience .right {
+    padding-right: 1rem;
+  }
+
   /**Skills section -> changed to vertical**/
   #skills .right {
     text-align: center;
@@ -356,11 +369,17 @@ footer p {
   }
 
   #skills .left {
+    margin-top: 10px;
+    flex-wrap: wrap;
     align-items: flex-start;
-    max-width: 202px;
+    max-width: 13rem;
   }
 
   #skills hr {
     width: 100%;
+  }
+
+  #languages span {
+    font-size: 6pt;
   }
 }
